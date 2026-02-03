@@ -1,0 +1,38 @@
+class Solution {
+    public boolean exist(char[][] board, String word) {
+        int r=board.length;
+        int c=board[0].length;
+        boolean[][] visited=new boolean[r][c];
+        if(word.isEmpty()){
+            return false;
+        }
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                if(board[i][j]==word.charAt(0)){
+                    if(search(word,i,j,board,visited)){
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+    private boolean search(String word, int r,int c,char[][] board,boolean[][] visited){
+        if(word.isEmpty()){
+            return true;
+        }
+        if(r<0|| r>=board.length|| c<0||c>=board[0].length||board[r][c]!=word.charAt(0)||visited[r][c]){
+            return false;
+        }
+        visited[r][c]=true;
+        boolean found=search(word.substring(1),r+1,c,board,visited)||
+        search(word.substring(1),r-1,c,board,visited)||
+        search(word.substring(1),r,c-1,board,visited)||
+        search(word.substring(1),r,c+1,board,visited);
+        
+
+        visited[r][c]=false;
+    return found;
+    }
+    
+}
