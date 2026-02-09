@@ -1,3 +1,5 @@
+//BFS code using queue
+
 void bfs(int start) {
     boolean[] visited = new boolean[V];
     Queue<Integer> q = new LinkedList<>();
