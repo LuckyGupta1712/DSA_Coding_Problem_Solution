@@ -1,31 +1,25 @@
-package linkedlist;
-
-public class removeNthNode {
+package linkedlists;
+public class reverseALinkedList {
     static class ListNode {
         int val;
         ListNode next;
 
         ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-
     }
 
     static class Solution {
-        public ListNode removeNthFromEnd(ListNode head, int n) {
-            ListNode res=new ListNode(0,head);
-            ListNode dummy=res;
+        public ListNode reverseList(ListNode head) {
+            ListNode prev = null;
+            ListNode curr = head;
+            ListNode next;
 
-            for (int i=0;i<n;i++){
-                head=head.next;
+            while (curr != null) {
+                next = curr.next; // establishing value of next
+                curr.next = prev; // making the reversal link
+                prev = curr; // moving prev to next pos
+                curr = next; // moving ahead
             }
-            while(head!=null){
-                dummy=dummy.next;
-                head=head.next;
-            }
-
-            dummy.next=dummy.next.next;
-
-            return res.next;
+            return prev;
         }
     }
 
@@ -37,14 +31,13 @@ public class removeNthNode {
         head.next.next.next.next = new ListNode(5);
 
         Solution res = new Solution();
-        ListNode newHead = res.removeNthFromEnd(head, 2);
+        ListNode newHead = res.reverseList(head);
 
-        // printing the modified linked list
+        // printing the reversed linked list
         ListNode temp = newHead;
         while (temp != null) {
             System.out.print(temp.val + " ");
             temp = temp.next;
         }
     }
-    
 }
