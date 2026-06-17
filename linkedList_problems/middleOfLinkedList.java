@@ -1,4 +1,4 @@
-package linkedlists;
+package linkedList_problems;
 
 public class middleOfLinkedList {
     static class ListNode {

@@ -1,4 +1,4 @@
-package linkedlist;
+package linkedList_problems;
 
 public class loopDetection {
     static class ListNode {
