@@ -1,4 +1,4 @@
-package linkedlists;
+package linkedlist;
 
 public class mergeTwoSortedList {
     static class ListNode {
