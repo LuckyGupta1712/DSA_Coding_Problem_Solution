@@ -1,4 +1,4 @@
-package DFS_problems;
+package DFS_problem;
 import java.util.*;
 class DFS{
     public void dfs(List<List<Integer>> adj,int root,boolean[] visited){
