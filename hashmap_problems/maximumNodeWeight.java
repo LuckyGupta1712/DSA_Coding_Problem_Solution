@@ -2,6 +2,10 @@ package hashmap_problems;
 import java.util.HashMap;
 import java.util.Map;
 public class maximumNodeWeight {
+    // Code to find the node which has the maximum weight where weight of a node is defined as the sum of the indices of the nodes that point to it. 
+    // The exits array represents the directed edges in a graph, where exits[i] is the node that node i points to. 
+    // The function should return the index of the node with the maximum weight. 
+    // If there are multiple nodes with the same maximum weight, return the one with the largest index.
     public int maxWeightCell(int[] exits) {
         Map<Integer,Integer> map=new HashMap<>();
         for(int i=0;i<exits.length;i++){
