@@ -1,4 +1,4 @@
-package hashmap_problems;
+package hashmap;
 import java.util.HashMap;
 import java.util.Map;
 public class maximumNodeWeight {
