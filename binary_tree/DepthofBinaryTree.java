@@ -1,3 +1,4 @@
+package binary_tree;
 public class DepthofBinaryTree{
     public class TreeNode {
       int val;

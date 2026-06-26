@@ -1,3 +1,4 @@
+package binary_tree;
 public class symmetricTree {
     public class TreeNode {
         int val;
